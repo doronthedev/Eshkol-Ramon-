@@ -1,0 +1,167 @@
+.eventsHelpUser{
+    height: 650px;
+    width: 450px;
+    border-radius: 15px;
+    padding: 30px;
+
+    font-family: sans-serif;
+    border: none;
+    user-select: none;   
+    box-sizing: border-box;
+    display: none;
+    overflow: hidden;
+
+    background: rgb(255, 255, 255);
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.671);     
+}
+
+.eventsHelpUser::backdrop{
+    background-color:  rgba(69, 69, 69, 0.474);
+}
+.eventsHelpUser .exitIcon{
+    position: absolute;
+    text-align: center;
+    cursor: pointer;
+
+    font-size: 30px;
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    padding: 3px;
+    margin-top: 10px;
+    margin-left: 410px;
+}
+
+.eventsHelpUser .exitIcon:hover{
+    animation-name: exitIconAnim;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-direction:normal;
+    animation-timing-function:ease-in-out;
+    background: rgb(220, 220, 220);
+}
+
+@keyframes exitIconAnim {
+    100%{
+        transform: rotateZ(90deg);
+    }
+}
+.eventsHelpUser .exitIcon:active{
+    background: rgb(167, 166, 166);
+}
+
+.eventsHelpUser span{
+    font-size: 1.5em;
+}
+
+.eventsHelpUser .screenSize{
+    margin: 30px auto;
+    font-weight: bold;
+}
+
+.eventsHelpUser .ifKey{
+    display: block;
+    margin: 20px 0;
+    font-weight: bold;
+}
+
+.eventsHelpUser .ifKey span{
+    margin: 0 10px;
+} 
+
+.eventsHelpUser .icons{
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    background: rgb(184, 182, 182);
+
+    text-align: center;
+}
+
+.eventsHelpUser hr{
+    color: rgb(0, 0, 0);
+    background-color: rgb(0, 0, 0);
+    width: 98%;
+    height: 0.2px;
+}
+
+.events-SignIn{ /* event sign in */
+    display: none;
+    flex-direction: column;
+    text-align: center;
+    height: 350px;
+    width: 280px;
+
+    font-family: sans-serif;
+    background-color: rgb(255, 255, 255);
+    border: none;
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 1px 1px 20px rgba(0, 0, 0, 0.671);     
+    user-select: none;   
+}
+
+.events-SignIn .inputUser{
+    border-radius: 12px;
+    margin: 10px 0px;
+    border: 2px solid black;
+    text-align: center;
+    font-size: 1em;
+    cursor:text;
+}
+
+.events-SignIn hr{
+    color: rgb(199, 255, 252);
+    background-color: rgb(199, 255, 252);
+    width: 95%;
+    height: 0.2px;
+}
+
+.events-SignIn .userGender{
+    margin-right: 20px;
+    font-size: 1.2em;
+}
+
+.events-SignIn .genderSelect{
+    width: 140px;
+    text-align: center;
+    font-size: 1.2em;
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+.events-SignIn :is(.signInButton, .exitSignIn){
+    border-radius: 12px;
+    margin: 10px 0px;
+    border: 1px solid black;
+    font-size: 1em;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.events-SignIn .signInButton{
+    background-color: rgb(45, 140, 174);
+    color: white;
+    border: none;
+}
+
+.events-SignIn .signInButton:hover{
+    background-color: rgb(52, 154, 192);
+}
+
+.events-SignIn .signInButton:active{
+    background-color: rgba(64, 146, 175, 0.804);
+}
+
+.events-SignIn .exitSignIn{
+    background-color: rgb(239, 239, 239);
+
+}  
+
+.events-SignIn .exitSignIn:hover{
+    background-color: rgba(218, 218, 218, 0.688);
+}
+
+.events-SignIn .exitSignIn:active{ 
+    background-color: rgb(239, 239, 239);
+}

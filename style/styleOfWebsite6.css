@@ -1,0 +1,228 @@
+body{
+    background-image: url("https://images.pexels.com/photos/10836913/pexels-photo-10836913.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    user-select: none;
+    margin: 0;
+}
+
+.container{
+    box-sizing: border-box;
+    width: 70%;
+    margin: 0 auto;
+    font-family: sans-serif;
+}
+
+.scroll{
+    height: 5px;
+    position: fixed;
+    top: 0;
+    z-index: 1;
+    background-color: rgb(199, 255, 252);
+    width: 70%;
+    scale: 0 1;
+    transform-origin: left;
+    animation: scrolling;
+    animation-timeline: scroll();
+}
+
+@keyframes scrolling {
+    to {scale: 1 1;}
+}
+
+.headerImg{
+    height: 180px;
+    width: 100%;
+}
+
+.headerImg img{
+    height: 100%;
+    width: 100%;
+    border-radius: 4px 4px 0 0;
+}
+
+nav{
+    display: grid;
+    grid-template-columns: 30% 55%;
+    column-gap: 30px;
+    height: 59px;
+    width: 100%;
+    background-color: rgb(106, 98, 98);
+}
+
+nav .logo{
+    display: flex;
+    height: 68px;
+    margin: 0 auto;
+    align-items: center;
+    justify-content: center;
+}
+
+nav .logo img{
+    height: 100px;
+    margin: 0;
+    text-align: center;
+    position: relative;
+    cursor: pointer;
+}
+
+nav .logo img:hover{
+    height: 108px;
+}
+
+nav .navBar ul{
+    display: flex;
+    justify-content: space-around;
+    list-style-type: none;
+    padding: 0 10px;
+    margin: 0;
+}
+
+nav .navBar li:not(.dropdownPicture){
+    margin: auto 20px;
+    cursor: pointer;
+}
+
+nav .navBar a:not(.active .dropdownPicture){
+    display: inline-block;
+    text-align: center;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 20px;
+    height: 100%;
+    padding: 18.1px;
+    color: rgb(199, 255, 252);
+}
+
+nav .navBar a:not(.dropdownsPictures, .dropdownPicture):hover{
+    height: 100%;
+    transition: 1s;
+}
+
+nav .hoverNavBarDark:hover{background-color: #373739}
+
+nav .hoverNavBarLight:hover{background-color: #5e5555}
+
+nav .active{
+    font-weight: bold;
+    box-shadow: 0px 0px 10px rgb(8, 8, 8);
+    height: 100%;
+    font-size: 20px;
+    color: rgb(199, 255, 252);
+    background-color: hsl(0, 5%, 35%);
+    z-index: 2;
+}
+
+nav .dropdownsPictures{ /*start of dropdown*/
+    display: none;
+    background-color: hsl(0, 4%, 40%); 
+    position: absolute;
+    cursor: pointer;
+}
+
+nav .menuDropdownsPictures{
+
+}
+
+nav .menuDropdownsPictures:hover .dropdownsPictures{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 280px;
+    min-width: 100px;
+}
+
+nav .dropdownPicture a{
+    margin: 0 1.5px;
+}
+
+nav .dropdownPicture a:hover{
+    background-color: hsl(0, 5%, 35%);
+}  /*end of dropdown*/
+
+main{
+    background-color: #dfe4ea;
+    height: 1500px;
+    width: 100%;
+    transition: 0s;
+}
+
+footer{
+    box-sizing: border-box;
+    display: grid;
+    grid-template-columns: 35% 35% 30%;
+    height: 400px;
+    width: 100%;
+    background-color: hsl(0, 4%, 40%);
+    border-radius: 0 0 20px 20px;
+    transition: 0s;
+}
+
+footer .rate{
+    margin-top: 100px;
+    margin-left: 10px;
+    text-align: center;
+}
+
+footer .rate_us{
+    font-size: 2em;
+    font-family: sans-serif;
+    text-shadow: 0 0 8px rgb(255, 255, 255); 
+    font-weight: bold;
+    color: rgb(0, 0, 0);
+}
+
+footer .stars{
+    display: inline-block;
+    color: #ffcc0068;
+    margin: 20px 5px 5px 5px;
+    font-size: 3em;
+    cursor: pointer;
+    transition: 400ms;
+}
+footer .map{
+    margin: 50px 10px;
+}
+
+footer .contact{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    row-gap: 60px;
+    margin-left: 10px;
+    margin-right: 40px;
+    direction: rtl;
+}
+
+footer .contact_info{
+    color: rgb(3, 3, 3);
+    font-weight: bold;
+    font-size: 1.2em;
+    transition: 0s;
+}
+
+footer .icon{
+    transition: 0s;
+}
+
+@media screen and (max-width: 1000px) {
+    nav .logo{
+        display: none;
+    }
+    nav{
+        grid-template-columns: 100%;
+    }
+    nav .navBar{
+        margin: 0 auto;
+    }
+    footer{
+        height: 750px;
+        display: flex;
+        flex-direction: column;
+    }
+    footer .inFooter{
+        margin: 10px auto;
+    }
+}
+
